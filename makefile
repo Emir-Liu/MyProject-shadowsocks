@@ -1,7 +1,7 @@
 
 
-serverip	= 155.138.146.143
-ssh_password	= v(6GpTVbNxGJ=hzk
+serverip	= 95.179.220.102
+ssh_password	= 9k}T=2V()G++q_eH
 server_port	= 5024
 local_address	= 127.0.0.1
 local_port	= 1080
