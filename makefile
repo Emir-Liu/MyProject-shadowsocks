@@ -1,8 +1,8 @@
 
 
-serverip	= 95.179.220.102
+serverip	= 95.179.129.245
 ssh_username	= root
-ssh_password	= hH5\%n5tr8[=ASWf+
+ssh_password	= 7_Jr7s7k\)m[,Tj54
 server_port	= 5024
 local_address	= 127.0.0.1
 local_port	= 1080
