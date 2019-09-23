@@ -31,7 +31,7 @@ startlocal:	createlocalconfig
 
 buildserver:	
 	apt-get --yes --force-yes update
-	apt install shadowsocks
+	apt --yes --force-yes install shadowsocks
 
 createserverconfig:
 	echo "{\n\"server\":\"0.0.0.0\",\n\"server_port\":$(server_port),\n\"password\":\"$(password)\",\n\"method\":\"$(method)\"\n}" > shadowsocks.json
