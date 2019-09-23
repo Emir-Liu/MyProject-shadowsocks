@@ -2,7 +2,7 @@
 
 serverip	= 95.179.191.176
 ssh_username	= root
-ssh_password	= a5\#QZShak14@qs1q
+ssh_password	= \)3CfYchF}yR5kM*7
 server_port	= 5024
 local_address	= 127.0.0.1
 local_port	= 1080
@@ -18,6 +18,7 @@ check :
 	ping $(serverip)
 
 connecttest:
+	ssh-keygen -f "/home/eglym/.ssh/known_hosts" -R "$(serverip)"
 	./test.sh $(ssh_username) $(serverip) $(ssh_password)
 connect:
 	ssh $(serveraccount)@$(serverip)
@@ -29,7 +30,7 @@ startlocal:	createlocalconfig
 	sslocal -c shadowsocks.json -d start
 
 buildserver:	
-	apt-get update
+	apt-get --yes --force-yes update
 	apt install shadowsocks
 
 createserverconfig:
