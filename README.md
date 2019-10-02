@@ -13,7 +13,7 @@
   step 3.open shell and change the working directory to the local repositery
   
   step 4.change the makefile file,change serverip and ssh_password to your own VPS/VPN's ip and password
-    if your password includes "(",")","#" and so on,you should add "\"before it 
+    if your password includes "(",")","#" and so on,you should add "\\"before it 
   
   step 5.input the following commands:
   ```bash
