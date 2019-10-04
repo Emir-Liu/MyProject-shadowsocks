@@ -1,8 +1,8 @@
 
 
-serverip	= 95.179.191.176
+serverip	= 95.179.146.13
 ssh_username	= root
-ssh_password	= \)3CfYchF}yR5kM*7
+ssh_password	= qA2.p*Aw}94{Zfed
 server_port	= 5024
 local_address	= 127.0.0.1
 local_port	= 1080
