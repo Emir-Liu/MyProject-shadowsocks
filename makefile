@@ -1,4 +1,4 @@
-
+SHELL=/bin/bash
 
 serverip	= 95.179.146.13
 ssh_username	= root
@@ -53,9 +53,21 @@ buildserver:
 
 createserverconfig:
 	#创建服务器端shadowsocks的配置文件
-	echo "{\n\"server\":\"0.0.0.0\",\n\"server_port\":$(server_port),\n\"password\":\"$(password)\",\n\"method\":\"$(method)\"\n}" > shadowsocks.json
-
+	echo '{'	> test-server
+	echo '	"server":"0.0.0.0",' >> test-server
+	echo '	"server_port":$(server_port),' >> test-server
+	echo '	"password":"$(password)",' >> test-server
+	echo '	"method":"$(method)"' >> test-server
+	echo '}' >> test-server
 createlocalconfig:
 	#创建客户端shadowsocks的配置文件
-	echo "{\n\"server\": \"$(serverip)\",\n\"server_port\": $(server_port),\n\"local_address\": \"$(local_address)\",\n\"local_port\": \"$(local_port)\",\n\"password\": \"$(password)\",\n\"method\": \"$(method)\",\n\"timeout\": $(timeout),\n\"fast_open\": $(fast_open)\n}" > shadowsocks.json
-
+	echo '{' > test-local
+	echo '"server": "$(serverip)",' >> test-local
+	echo '"server_port": $(server_port),' >> test-local
+	echo '"local_address": "$(local_address)",' >> test-local
+	echo '"local_port": "$(local_port)",' >> test-local
+	echo '"password": "$(password)",' >> test-local
+	echo '"method": "$(method)",' >> test-local
+	echo '"timeout": $(timeout),' >> test-local
+	echo '"fast_open": $(fast_open)' >> test-local
+	echo '}' >> test-local
